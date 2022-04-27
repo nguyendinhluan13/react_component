@@ -4,6 +4,16 @@ import Button from '../../components/commons/Button';
 import '../../assets/css/style.css';
 import Social from '../../components/commons/Social';
 import Input from '../../components/commons/Input';
+import styled from "styled-components"
+
+
+
+const Title = styled.h1`
+    font-size: 30px;
+    text-align: center;
+    color: ${props => props.colorText ? props.colorText : 'red'};
+    background: ${props => props.backgroundText ? props.backgroundText : 'rgba(255, 99, 71, 0.6)'}
+`;
 
 const HomePage = () => {
     const [name, setName] = useState('');
@@ -26,8 +36,7 @@ const HomePage = () => {
         
     }
     return (
-        // <div className="Home">
-             
+        // <div className="Home">    
         //     {/* Đây là làm kiểu cách về state */}
         //      {loading ? (
         //         <h1>Loading...</h1> 
@@ -53,6 +62,9 @@ const HomePage = () => {
         ): (
         <div>
             <div>
+                 <Title>Bài tập Style component 1</Title> {/*đây là cách sử dụng về style component */}
+                <Title colorText="Blue">Bài tập Style component 2</Title>   {/* đây là cách sử dụng về props style component */}
+                <Title colorText="Pink" backgroundText="#7B68EE	">Bài tập Style component 2</Title>   {/* đây là cách sử dụng về props style component */}
                 <Text text={"Hello bạn: " + name}/>
                 <Text text={"Age: " + age}/>
             </div>

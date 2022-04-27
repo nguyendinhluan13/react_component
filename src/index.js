@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-//import HomePage from './pages/home/HomePage';
+import HomePage from './pages/home/HomePage';
 import ListPage from './pages/home/ListPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
   <React.StrictMode>
-    <ListPage />
+    <HomePage />
   </React.StrictMode>,
   document.getElementById('root')
 );
